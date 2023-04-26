@@ -1,0 +1,37 @@
+{
+  "name": "joseph-app",
+  "version": "1.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexyanchuk/kostel-app.git"
+  },
+  "author": "JS Team",
+  "license": "ISC",
+  "scripts": {
+    "start": "bash ./start.sh",
+    "clean": "bash ./clean.sh",
+    "server": "yarn run dev --cwd server",
+    "app": "yarn run start --cwd app",
+    "build-server": "yarn build --cwd server",
+    "build-client": "yarn build --cwd app",
+    "start:dev": "concurrently \"yarn server\" \"yarn app\"",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.0"
+  },
+  "lint-staged": {
+    "app/src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "yarn --cwd app lint:fix"
+    ]
+  },
+  "engines": {
+    "node": "^18.12.1"
+  },
+  "dependencies": {
+    "yarn": "^1.22.19"
+  }
+}
