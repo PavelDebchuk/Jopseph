@@ -1,4 +1,3 @@
-
 ## Getting Started
 
 **Install dependencies**
@@ -22,10 +21,10 @@ yarn run app
 **Start dev environment use:**
 
 ```bash
-yarn run start:dev
+npx nodemon
 ```
 
-Open [http://localhost:3005](http://localhost:3005) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Useful links
 
